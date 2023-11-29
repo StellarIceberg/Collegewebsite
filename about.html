@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Brighton College</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/91f7d28409.js" crossorigin="anonymous"></script>       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- header secton, contains the logo and everyhthing on the top half of the website-->
+        <section class="ab-header">
+            <nav>
+                <a href="index.html"><img src="image/logot.png"></a>
+                <div class="nav-links" id="navLinks">
+                   <!-- nav bar at the top-->
+                   <i class="fa fa-circle-xmark" onclick="hide_menu()"></i>                    
+                   <ul>
+                        <li> <a href="index.html"> HOME</a> </li>
+                        <li> <a href="about.html"> ABOUT US</a> </li>
+                        <li> <a href="course.html"> COURSE </a> </li>
+                        <li> <a href="enquiry.html"> ENQUIRY </a> </li>
+                        <li> <a href="contact.html"> CONTACT US</a> </li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="show_menu()"></i>
+            </nav>
+            <h1> About Us</h1>
+        </section>
+
+         <!-- body -->
+         <section class="about-us">
+
+         <div class="row">
+            <div class="about-college">
+                <h1>Where Expectations Soar and Dreams Take Flight</h1>
+                <p>Brighton College is an Australian Registereed Training Organisation (RTO) opearting under the National Vocational Educationa
+                    and Training (VET) Quality Framework (VQF). This is a regulated framework that is adminstrered by the Australian Skills Qualioty Authority (ASQA).
+                    <br> Brighton College was first registered to provide educational services in 2016 and is extended its educational services to International Students in 2017 at Brisbane, Queensland.
+                </p>
+                <a href="index.html" class="index-button aboutusbtn">EXPLORE NOW</a>
+            </div>
+            <div class="about-college">
+                <img src="Image/aboutus22.jpg" alt="">
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="about-college">
+                <img src="Image/ourmission22.jpg" alt="">
+            </div>
+            <div class="about-college">
+                <h1>Our Mission</h1>
+                <p>Our mission is to empower students with the necessary skill set to excel in the current workforce. We are dedicated to supporting our students on their journey towards achieving their goals and aspirations by fostering practical and academic skills, knowledge, and capability. 
+                    At Brighton, our commitment lies in providing professional adult education within a relaxed and supportive environment. Our aim is to cultivate highly skilled and job-ready graduates.
+                    Our approach to success revolves around:<br>
+                       <br><i class="fa-solid fa-arrow-right"></i>Empowering students through education and training.
+                       <br><i class="fa-solid fa-arrow-right"></i>Offering progressive and innovating qualifications that inspire students to thrive for excellence.
+                       <br><i class="fa-solid fa-arrow-right"></i>Assisting sudents in achieving their personal best in gaining a practical Education.
+                       <br><i class="fa-solid fa-arrow-right"></i>Ensuring small class sizes to provide individual attention to each student.
+                       <br><i class="fa-solid fa-arrow-right"></i>Enlisting qualified, experienced, and dedicated trainers who possess extensive knowledge and <br>expertise in their respective fields.
+                    
+                   </p>
+                   <a href="enquiry.html" class="index-button aboutusbtn">JOIN US</a>
+            </div>
+         </div>
+        </section>
+        <!-- body part 2 -->
+        
+        <!--- footer, social media plugin and &nbsp adds vertical space between icons ----->    
+        <section class="footer">
+            <h4>About Us</h4>
+            <p>We deliver Australian Qualifications Framework (AQF) qualifications which are drawn from Australian National Training Packages <br> and recognised within Australia and internationally.
+            <br>Copyright © 2020 Brighton College. ABN 61 149 878 044. CRICOS CODE 03635G. RTO CODE 45023</p>
+            <div class="icons">
+                <i class="fa fa-facebook"> </i> &nbsp;
+                <i class="fa fa-twitter"></i> &nbsp;
+                <i class="fa fa-instagram"></i> &nbsp;
+                <i class="fa fa-linkedin"></i> &nbsp;
+            </div>
+        </section>
+
+
+
+
+        <!-- Back to top button-->
+        <button type="button" class="btn btn-danger btn-floating btn-lg" id="back-to-top-button" >
+            <i class="fa-solid fa-arrow-up fa-2xl"></i> 
+        </button>
+
+        <!---attaching the javascript-->  
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>

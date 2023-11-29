@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Brighton College</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/91f7d28409.js" crossorigin="anonymous"></script>       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+        <style>
+            .collapsible {
+              color: #444;
+              cursor: pointer;
+              padding: 1px;
+              width: 100%;
+              border: none;
+              text-align: left;
+              outline: none;
+              font-size: 20px;
+              transition: 0.4s;
+            }
+        
+            .collapsible::before {
+              content: "+";
+              display: inline-block;
+              margin-right: 6px;
+              transition: transform 0.3s;
+            }
+        
+            .collapsible.active::before {
+              transform: rotate(45deg);
+            }
+        
+            .content {
+              padding: 0 10px;
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.2s ease-out;
+              border-bottom: 1px solid #ccc;
+            }
+            
+            .content h3{
+                font-weight: 300;
+                text-align: left;
+            }
+            
+          
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            
+            th, td {
+                padding: 8px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+            
+            th {
+                background-color: #f2f2f2;
+            }
+            
+            tr:nth-child(even) {
+                background-color: #e5e6da;
+            }
+            
+            tr:nth-child(odd) {
+                background-color: #94d3f0;
+            }
+</style>
+</style>
+
+          </style>
+    </head>
+
+    
+    <body>
+        <!-- header secton, contains the logo and everyhthing on the top half of the website-->
+        <section class="course-header">
+            <nav>
+                <a href="index.html"><img src="image/logot.png"></a>
+                <div class="nav-links" id="navLinks">
+                   <!-- nav bar at the top-->
+                   <i class="fa fa-circle-xmark" onclick="hide_menu()"></i>                    
+                   <ul>
+                        <li> <a href="index.html"> HOME</a> </li>
+                        <li> <a href="about.html"> ABOUT US</a> </li>
+                        <li> <a href="course.html"> COURSE </a> </li>
+                        <li> <a href="enquiry.html"> ENQUIRY </a> </li>
+                        <li> <a href="contact.html"> CONTACT US</a> </li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="show_menu()"></i>
+            </nav>
+            <h1> ICT50220 <br> Diploma of Information Technology (Cyber Security)</h1>
+            <h3> CRICOS Course Code: 105308G </h3>
+        </section>
+
+         <!-- body -->
+        <section class="abtcourse">
+            <div class="coursebox">
+                <h2>About this course</h2>
+                <p> This qualification reflects the role of individuals in a variety of
+                    information and communications technology (ICT) roles who have
+                    established specialised skills in a technical ICT function.
+                    Individuals in these roles carry out moderately complex tasks in
+                    specialist fields, working independently, as part of a team or
+                    leading deliverables with others. They may apply their skills
+                    across a wide range of industries, business functions and
+                    departments,or as a business owner (sole trader/contractor).</p>                 
+            </div>
+            <br>
+            <!---collasiple code from the internet for the first collasiple section, admission-->
+                <h2 class="collapsible">Admission: Entry and Criteria</h2>
+                <div class="content">
+                    <p>
+                        <h3>1. Age:</h3>
+                            <p>Students must be a minimum of 19 years old.</p>
+
+                            <h3>2. Academic Qualifications:</h3>
+                            <p>Completion of the equivalent of year 12 with exceptional academic standing is
+                            required.</p>
+
+                            <h3>3. English Language Proficiency:</h3>
+                            <p>Provide evidence of an IELTS Academic score of 6.0 or equivalent, with test
+                            results no older than 1 year.</p>
+
+                            <h3>4. Course Entry Interview:</h3>
+                            <p>Participation in a rigorous course entry interview to demonstrate exceptional
+                            suitability and a strong passion for the field of IT.</p>
+
+                            <p>Exemptions from providing evidence of English language competence may be
+                            granted if you can present well-documented evidence of meeting any of the
+                            following criteria:
+
+                            
+                            <br><i class="fa-solid fa-arrow-right"></i>Education in an English-speaking country: Have received education for a
+                            minimum of 7 years in an English-speaking country.
+                            <br><i class="fa-solid fa-arrow-right"></i>Completion of a Certificate IV level course: Successfully completed at
+                            least 9 months of a Certificate IV level course in an Australian Registered
+                            Training Organization (RTO) with outstanding performance.
+                            <br><i class="fa-solid fa-arrow-right"></i>Advanced English Placement Test: Achieved a superior score on an advanced
+                            English Placement Test.
+                            <br><i class="fa-solid fa-arrow-right"></i>Completion of an intensive foundation course: Successfully completed an
+                            intensive foundation course in Australia focused on advanced English language
+                            skills.
+                            <br><i class="fa-solid fa-arrow-right"></i>High School education in English: Completed entire high school education
+                            in English Language with outstanding grades.
+                            
+
+                            Please note that alternative English language tests such as PTE and TOEFL can
+                            be accepted, provided you can provide results that are confirmed to be
+                            equivalent to IELTS 6.0 or higher.</p>
+                                                    
+                    </div>
+                    <!--basic course table-->
+                    <h2 class="collapsible">Course Structure</h2>
+                    <div class="content">
+                        <br>
+                        <table>
+                            <tr>
+                              <th>Unit Code</th>
+                              <th>Unit Name</th>
+                              <th>Core/Elective</th>
+                            </tr>
+                            <tr>
+                              <td>BSBCRT512</td>
+                              <td>Originate and develop concepts</td>
+                              <td>Core</td>
+                            </tr>
+                            <tr>
+                              <td>BSBXCS402</td>
+                              <td>Promote workplace cyber security awareness and best practices</td>
+                              <td>Core</td>
+                            </tr>
+                            <tr>
+                              <td>BSBXTW401</td>
+                              <td>Lead and facilitate a team</td>
+                              <td>Core</td>
+                            </tr>
+                            <tr>
+                              <td>ICTICT517</td>
+                              <td>Match ICT needs with the strategic direction of the organisation</td>
+                              <td>Core</td>
+                            </tr>
+                            <tr>
+                              <td>ICTICT532</td>
+                              <td>Apply IP, ethics and privacy policies in ICT environments</td>
+                              <td>Core</td>
+                            </tr>
+                            <tr>
+                              <td>ICTSAS527</td>
+                              <td>Manage client problems</td>
+                              <td>Core</td>
+                            </tr>
+                            <tr>
+                              <td>ICTSAD507</td>
+                              <td>Design and implement quality assurance processes for business solutions</td>
+                              <td>Elective</td>
+                            </tr>
+                            <tr>
+                              <td>ICTSAD508</td>
+                              <td>Develop technical requirements for business solutions</td>
+                              <td>Elective</td>
+                            </tr>
+                            <tr>
+                              <td>ICTSAD509</td>
+                              <td>Produce ICT feasibility reports</td>
+                              <td>Elective</td>
+                            </tr>
+                            <tr>
+                              <td>ICTICT443</td>
+                              <td>Work collaboratively in the ICT industry</td>
+                              <td>Elective</td>
+                            </tr>
+                            <tr>
+                              <td>ICTCYS407</td>
+                              <td>Gather, analyse and interpret threat data</td>
+                              <td>Elective</td>
+                            </tr>
+                            <tr>
+                              <td>ICTCYS610</td>
+                              <td>Protect critical infrastructure for organisations</td>
+                              <td>Elective</td>
+                            </tr>
+                            <tr>
+                              <td>ICTCYS613</td>
+                              <td>Utilise design methodologies for security architecture</td>
+                              <td>Elective</td>
+                            </tr>
+                            <tr>
+                              <td>ICTICT523</td>
+                              <td>Gather data to identify business requirements</td>
+                              <td>Elective</td>
+                            </tr>
+                            <tr>
+                              <td>ICTSAS524</td>
+                              <td>Develop, implement and evaluate an incident response plan</td>
+                              <td>Elective</td>
+                            </tr>
+                            <tr>
+                              <td>ICTSAS526</td>
+                              <td>Review and update disaster recovery and contingency plans</td>
+                              <td>Elective</td>
+                            </tr>
+                            <tr>
+                              <td>ICTWEB527</td>
+                              <td>Research and apply emerging web technology trends</td>
+                              <td>Elective</td>
+                            </tr>
+                            <tr>
+                              <td>ICTDBS505</td>
+                              <td>Monitor and improve knowledge management systems</td>
+                              <td>Elective</td>
+                            </tr>
+                            <tr>
+                              <td>ICTWEB441</td>
+                              <td>Produce basic client-side script</td>
+                              <td>Elective</td>
+                            </tr>
+                            <tr>
+                              <td>ICTWEB518</td>
+                              <td>Build a document using extensible markup language</td>
+                              <td>Elective</td>
+                            </tr>
+                          </table>
+                          <br> <br>
+                          
+                    </div>
+
+                    <h2 class="collapsible">Career Outcomes</h2>
+                    <div class="content">
+                    <p>This course leads to various occupational outcomes, as
+                    the field offers a wide range of career opportunities. Here
+                    are some common occupational outcomes that individuals can
+                    pursue after this course:
+                        <br><i class="fa-solid fa-arrow-right"></i>Software Developer/Engineer
+                        <br><i class="fa-solid fa-arrow-right"></i>Web Developer
+                        <br><i class="fa-solid fa-arrow-right"></i>Systems Analyst
+                        <br><i class="fa-solid fa-arrow-right"></i>Database Administrator
+                        <br><i class="fa-solid fa-arrow-right"></i>Network Administrator
+                        <br><i class="fa-solid fa-arrow-right"></i>IT Project Manager
+                        <br><i class="fa-solid fa-arrow-right"></i>IT Consultant
+                        <br><i class="fa-solid fa-arrow-right"></i>Cybersecurity Analyst
+                        <br><i class="fa-solid fa-arrow-right"></i>Data Scientist
+                        <br><i class="fa-solid fa-arrow-right"></i>IT Auditor
+                    </p>
+                    </div>
+                    <br><br>
+                    <a href="enquiry.html" class="index-button aboutusbtn">Like to know more?</a>
+        </section>
+
+        <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+      
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.maxHeight){
+                content.style.maxHeight = null;
+              } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+              }
+            });
+          }
+        </script>
+       
+        
+
+        <!--- footer, social media plugin and &nbsp adds vertical space between icons ----->    
+        <section class="footer">
+            <h4>About Us</h4>
+            <p>We deliver Australian Qualifications Framework (AQF) qualifications which are drawn from Australian National Training Packages <br> and recognised within Australia and internationally.
+            <br>Copyright © 2020 Brighton College. ABN 61 149 878 044. CRICOS CODE 03635G. RTO CODE 45023</p>
+            <div class="icons">
+                <i class="fa fa-facebook"> </i> &nbsp;
+                <i class="fa fa-twitter"></i> &nbsp;
+                <i class="fa fa-instagram"></i> &nbsp;
+                <i class="fa fa-linkedin"></i> &nbsp;
+            </div>
+        </section>
+
+        
+
+
+        <!-- Back to top button-->
+        <button type="button" class="btn btn-danger btn-floating btn-lg" id="back-to-top-button" >
+            <i class="fa-solid fa-arrow-up fa-2xl"></i> 
+        </button>
+
+        <!---attaching the javascript-->  
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>

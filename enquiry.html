@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Brighton College</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/91f7d28409.js" crossorigin="anonymous"></script>       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- header secton, contains the logo and everyhthing on the top half of the website-->
+        <section class="enquiry-header">
+            <nav>
+                <a href="index.html"><img src="image/logot.png"></a>
+                <div class="nav-links" id="navLinks">
+                   <!-- nav bar at the top-->
+                   <i class="fa fa-circle-xmark" onclick="hide_menu()"></i>                    
+                   <ul>
+                        <li> <a href="index.html"> HOME</a> </li>
+                        <li> <a href="about.html"> ABOUT US</a> </li>
+                        <li> <a href="course.html"> COURSE </a> </li>
+                        <li> <a href="enquiry.html"> ENQUIRY </a> </li>
+                        <li> <a href="contact.html"> CONTACT US</a> </li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="show_menu()"></i>
+            </nav>
+            <h1> ENQUIRY</h1>
+        </section>
+
+         <!-- body, comment box-->
+       <div class="comment-box">
+        <h3>Enquire about our Courses</h3>
+        <form class="comment-form1">
+            <input type="text" placeholder="Enter First Name">
+            <input type="email" placeholder="Enter Last Name">
+            <br>
+        </form>
+        <form class="comment-form">
+            <input type="email" placeholder="Enter Email"> <br>
+            <input type="tel" placeholder="Enter Phone No."> <br>
+            <input type="date" placeholder="Date of Birth"> <br>
+            <input type="text" placeholder="Country Of Citizenship"> <br>
+            <br>
+            <!--dropdown box from the internet-->
+            <label for="Course">Course:</label> 
+                <select name="coursesss" id="coyurs"> 
+                    <option value="Information Technology">Information Technology</option> 
+                    <option value="Information Technology">IT</option> 
+                    <option value="Information Technology">Advanced IT</option>                     
+                </select> <br> <br>
+          
+            <!--BUTTON code same as aboutus page-->
+            <button type="submit" class="index-button aboutusbtn"> SUBMIT</button>
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                  <span class="close">&times;</span>
+                  <h2>Thank You!</h2>
+                  <p>We'll reach back to your shortly.</p>
+                </div>
+              </div>
+          
+        </form>
+       </div>
+       <!--text validation script for enquiry form, from the internet, changed just the variable names.-->
+       <script>
+        // Get the form and submit button elements
+        const commentForm = document.querySelector('.comment-form');
+        const submitButton = commentForm.querySelector('.aboutusbtn');
+      
+        // Add event listener to the form submit event
+        commentForm.addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent form submission
+      
+          // Validate form fields
+          if (validateForm()) {
+            // All form fields are filled, allow form submission
+            commentForm.submit();
+          } else {
+            // Display an error message or perform any other desired action
+            alert('Please fill in all form fields.');
+          }
+        });
+      
+        // Function to validate the form fields
+        function validateForm() {
+          // Get all input fields within the form
+          const inputs = commentForm.getElementsByTagName('input');
+      
+          // Check if any input field is empty
+          for (let i = 0; i < inputs.length; i++) {
+            if (inputs[i].value.trim() === '') {
+              return false; // Field is empty
+            }
+          }
+      
+          return true; // All fields are filled
+        }
+      </script>
+
+       
+
+       <!-- specific to this page only, when enquiry button is clicked, there will be a popup-->
+       <style>
+        /* Styles for the popup */
+        .popup {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .popup-content {
+          background-color: #fefefe;
+          margin: 15% auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 300px;
+          text-align: center;
+        }
+        
+        .close {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      </style>
+      <script>
+        // Get the popup element
+        const popup = document.getElementById('popup');
+    
+        // Function to display the popup
+        function displayPopup() {
+          popup.style.display = 'block';
+        }
+    
+        // Function to close the popup
+        function closePopup() {
+          popup.style.display = 'none';
+        }
+    
+        // Add event listeners to the button and close icon
+        submitButton.addEventListener('click', displayPopup);
+        document.querySelector('.close').addEventListener('click', closePopup);
+      </script>
+      
+       
+        
+
+        <!--- footer, social media plugin and &nbsp adds vertical space between icons ----->    
+        <section class="footer">
+            <h4>About Us</h4>
+            <p>We deliver Australian Qualifications Framework (AQF) qualifications which are drawn from Australian National Training Packages <br> and recognised within Australia and internationally.
+            <br>Copyright © 2020 Brighton College. ABN 61 149 878 044. CRICOS CODE 03635G. RTO CODE 45023</p>
+            <div class="icons">
+                <i class="fa fa-facebook"> </i> &nbsp;
+                <i class="fa fa-twitter"></i> &nbsp;
+                <i class="fa fa-instagram"></i> &nbsp;
+                <i class="fa fa-linkedin"></i> &nbsp;
+            </div>
+        </section>
+
+        
+
+
+        <!-- Back to top button-->
+        <button type="button" class="btn btn-danger btn-floating btn-lg"
+        id="back-to-top-button" >
+            <i class="fa-solid fa-arrow-up fa-2xl"></i> 
+        </button>
+
+        <!---attaching the javascript-->  
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>

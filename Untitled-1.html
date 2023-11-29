@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Styles for the popup */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .popup-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 300px;
+      text-align: center;
+    }
+    
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button type="submit" class="index-button aboutusbtn">SUBMIT</button>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h2>Popup Content</h2>
+      <p>This is the content of the popup.</p>
+    </div>
+  </div>
+
+  <script>
+    // Get the button and popup element
+    const submitButton = document.querySelector('.aboutusbtn');
+    const popup = document.getElementById('popup');
+
+    // Function to display the popup
+    function displayPopup() {
+      popup.style.display = 'block';
+    }
+
+    // Function to close the popup
+    function closePopup() {
+      popup.style.display = 'none';
+    }
+
+    // Add event listeners to the button and close icon
+    submitButton.addEventListener('click', displayPopup);
+    document.querySelector('.close').addEventListener('click', closePopup);
+  </script>
+</body>
+</html>
